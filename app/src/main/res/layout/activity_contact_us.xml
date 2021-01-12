@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.PawVets.ContactUs">
+
+
+    <TextView
+        android:id="@+id/callText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1-555-521-5554"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/callBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call now" />
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="becky.hamilton12@hotmail.co.uk"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/emailBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Now" />
+
+    <Button
+        android:id="@+id/btn_livechat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Live Chat" />
+
+</LinearLayout>
+

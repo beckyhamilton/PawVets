@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/antic</item>
+        <item>@font/bentham</item>
+        <item>@font/love_ya_like_a_sister</item>
+    </array>
+</resources>

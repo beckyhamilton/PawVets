@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="20dp"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/editPhone"
+            android:hint="Phone Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:text="07593606470"
+            android:textSize="34sp"
+            android:inputType="phone"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@color/black"
+            app:met_singleLineEllipsis="true">
+
+        </com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:text="1234"
+            android:textColorHint="@color/black"
+            android:textSize="34sp"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@color/black"
+            app:met_singleLineEllipsis="true">
+
+        </com.rengwuxian.materialedittext.MaterialEditText>
+
+
+    </LinearLayout>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/SignIn"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="100dp"
+        android:layout_weight="1"
+        android:shadowColor="#121111"
+        android:text="Sign In"
+        android:textColor="#FAF6F6"
+        android:visibility="visible"
+        app:buttonColor="@color/SignInBtn"
+        android:layout_alignParentBottom="true"  />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/staff_login"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:shadowColor="#121111"
+        android:text="Staff Login"
+        android:textColor="#FAF6F6"
+        android:visibility="visible"
+        app:buttonColor="@color/SignInBtn"
+        android:layout_alignParentBottom="true"  />
+
+</RelativeLayout>

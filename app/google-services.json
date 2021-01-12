@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "949646935740",
+    "firebase_url": "https://paw-vets.firebaseio.com",
+    "project_id": "paw-vets",
+    "storage_bucket": "paw-vets.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949646935740:android:b3c0c4f8fdd0f3104972b9",
+        "android_client_info": {
+          "package_name": "com.example.project2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949646935740-orqfria96g65jvecshl6hrb0vhbggmav.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project2",
+            "certificate_hash": "68f262e70ffbcc175b94018b3958a9d4a2fa2c8c"
+          }
+        },
+        {
+          "client_id": "949646935740-0qhilc8rrot4pv2tjh9bma8grff6i5mi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvpCrRTwPKHp4_H9cAfvNpIvdXxWsW9b0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949646935740-0qhilc8rrot4pv2tjh9bma8grff6i5mi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

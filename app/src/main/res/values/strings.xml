@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">project2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="vets">
+        <item>Please Select a Vet</item>
+        <item>Rebecca</item>
+        <item>Adam</item>
+        <item>Hannah</item>
+        <item>John</item>
+        <item>Matthew</item>
+        <item>Amy</item>
+    </string-array>
+
+</resources>
