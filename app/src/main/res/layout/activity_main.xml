@@ -40,10 +40,10 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:shadowColor="#121111"
-            android:text="Sign In"
+            android:text="Login"
             android:textColor="#FAF6F6"
             android:visibility="visible"
-            app:buttonColor="@color/SignInBtn" />
+            app:buttonColor="@color/colorPrimaryDark" />
 
     </LinearLayout>
 

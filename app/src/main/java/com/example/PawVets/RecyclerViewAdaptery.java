@@ -93,18 +93,18 @@ public class RecyclerViewAdaptery extends RecyclerView.Adapter<RecyclerViewAdapt
                 mContext.startActivity(myaccount);
             }
 
-        //Open SymptomChecker if my symptom checker icon clicked
+        //Open ShoppingActivity if my symptom checker icon clicked
             if(getLayoutPosition() == 4)
             {
-                Intent symptom = new Intent(mContext,SymptomChecker.class);
+                Intent symptom = new Intent(mContext,ShoppingActivity.class);
                 mContext.startActivity(symptom);
             }
 
         //Open FindUs if my where to find us icon clicked
             if(getLayoutPosition() == 5)
             {
-                Intent myshopping = new Intent(mContext,MyShopping.class);
-                mContext.startActivity(myshopping);
+                Intent shopping = new Intent(mContext,ShoppingActivity.class);
+                mContext.startActivity(shopping);
             }
             }
 

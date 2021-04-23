@@ -30,9 +30,9 @@ public class ContactUs extends AppCompatActivity {
         setContentView(R.layout.activity_contact_us);
 
         //Defining variables
-        callText = findViewById(R.id.callText);
-        callBtn = findViewById(R.id.callBtn);
-        btn_livechat = findViewById(R.id.btn_livechat);
+     //   callText = findViewById(R.id.callText);
+      //  callBtn = findViewById(R.id.callBtn);
+      //  btn_livechat = findViewById(R.id.btn_livechat);
 
         //Setting on click listener for call button
         callBtn.setOnClickListener(new View.OnClickListener() {
