@@ -103,8 +103,8 @@ public class RecyclerViewAdaptery extends RecyclerView.Adapter<RecyclerViewAdapt
         //Open FindUs if my where to find us icon clicked
             if(getLayoutPosition() == 5)
             {
-                Intent shopping = new Intent(mContext,ShoppingActivity.class);
-                mContext.startActivity(shopping);
+                Intent newpet = new Intent(mContext, ShoppingActivity.class);
+                mContext.startActivity(newpet);
             }
             }
 

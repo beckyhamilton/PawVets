@@ -31,6 +31,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Appointment extends AppCompatActivity {
+
     TextView tvDate;
     EditText etDate;
     DatePickerDialog.OnDateSetListener setListener;
@@ -152,14 +153,14 @@ public class Appointment extends AppCompatActivity {
         vetName.setAdapter(adapter);
 
 
-    //When user clicks book appointment button, firebase is updated
-      bookapt.setOnClickListener(new View.OnClickListener() {
+//When user clicks book appointment button, firebase is updated
+        bookapt.setOnClickListener(new View.OnClickListener() {
             @Override
-           public void onClick(View view) {
+            public void onClick(View view) {
 
-               table_appt.addValueEventListener(new ValueEventListener() {
+                table_appt.addValueEventListener(new ValueEventListener() {
                     @Override
-                   public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                         Appt appt = new Appt(vetName.getText().toString(),petName.getText().toString(),selectDate.getText().toString(),selectTime.getText().toString());
                         table_appt.child(petName.getText().toString()).setValue(appt);
@@ -169,11 +170,13 @@ public class Appointment extends AppCompatActivity {
                         startActivity(bookingsuccess);
                     }
 
-                 @Override
-                 public void onCancelled(@NonNull DatabaseError error) {
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
                     }
                 });
             }
         });
     }
+
+
 }

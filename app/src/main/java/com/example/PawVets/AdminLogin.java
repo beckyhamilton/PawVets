@@ -2,6 +2,7 @@ package com.example.PawVets;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import com.example.PawVets.Model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,55 +19,57 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
-public class Login extends AppCompatActivity {
+public class AdminLogin extends AppCompatActivity {
 
     //Creating variables
-    EditText editPhone, editPassword;
-    Button SignIn, staffLogin;
+    EditText editID, editPassword;
+    Button signIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_admin_login);
 
         //Setting variables
-        editPassword = (MaterialEditText) findViewById(R.id.editPassword);
-        editPhone = (MaterialEditText) findViewById(R.id.editPhone);
-        SignIn = (Button) findViewById(R.id.SignIn);
-        staffLogin = (Button) findViewById(R.id.staff_login);
+        editID = (MaterialEditText)findViewById(R.id.editadminID);
+        editPassword = (MaterialEditText)findViewById(R.id.editpw);
+        signIn = (Button) findViewById(R.id.signin);
 
         //Init Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference table_user = database.getReference("User");
+        final DatabaseReference table_admin = database.getReference("Admin");
 
         //Creating on click listener for Sign In button
-        SignIn.setOnClickListener(new View.OnClickListener() {
+        signIn.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View view) {
 
-                final ProgressDialog mDialog = new ProgressDialog(Login.this);
+                final ProgressDialog mDialog = new ProgressDialog(AdminLogin.this);
                 mDialog.setMessage("Please wait...");
                 mDialog.show();
 
-                table_user.addValueEventListener(new ValueEventListener() {
+                table_admin.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                         //Check if user exists in database
-                        if (snapshot.child(editPhone.getText().toString()).exists()) {
+                        if(snapshot.child(editID.getText().toString()).exists()) {
 
                             //Get user information
                             mDialog.dismiss();
-                            User user = snapshot.child(editPhone.getText().toString()).getValue(User.class);
-                            if (user.getPassword().equals(editPassword.getText().toString())) {
-                                Intent loginsucess = new Intent(Login.this, Home.class);
+                            User admin = snapshot.child(editID.getText().toString()).getValue(User.class);
+                            if (admin.getPassword().equals(editPassword.getText().toString()))
+                            {
+                                Intent loginsucess = new Intent(AdminLogin.this, AdminHome.class);
                                 startActivity(loginsucess);
-                                Toast.makeText(Login.this, "Sign in Successful", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AdminLogin.this,"Sign in Successful", Toast.LENGTH_SHORT).show();
                             }
 
-                        } else {
+                        }
+                        else
+                        {
                             mDialog.dismiss();
-                            Toast.makeText(Login.this, "Sign in failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdminLogin.this, "Sign in failed", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -73,21 +77,10 @@ public class Login extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError error) {
 
 
+
                     }
                 });
             }
         });
-
-        staffLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent stafflogin = new Intent(Login.this, AdminLogin.class);
-                startActivity(stafflogin);
-
-            }
-        });
-
-
-            }
-        }
-
+    }
+}
