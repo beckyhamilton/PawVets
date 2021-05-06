@@ -20,7 +20,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class SignUp extends AppCompatActivity {
 
-    MaterialEditText editPhone, editName, editPassword;
+    MaterialEditText editUsername, editName, editPassword;
     Button SignUp;
 
     @Override
@@ -30,7 +30,7 @@ public class SignUp extends AppCompatActivity {
 
         editName = (MaterialEditText)findViewById(R.id.editName);
         editPassword = (MaterialEditText)findViewById(R.id.editPassword);
-        editPhone = (MaterialEditText)findViewById(R.id.editPhone);
+        editUsername = (MaterialEditText)findViewById(R.id.editUsername);
 
         SignUp = (Button)findViewById(R.id.SignUpbtn);
 
@@ -49,14 +49,14 @@ public class SignUp extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         //Check if user already registered
-                        if(snapshot.child(editPhone.getText().toString()).exists())
+                        if(snapshot.child(editUsername.getText().toString()).exists())
                         {
                            mDialog.dismiss();
-                            Toast.makeText(SignUp.this, "Phone number already registered", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this, "Username already exists", Toast.LENGTH_SHORT).show();
                         }
                         mDialog.dismiss();
                         User user = new User(editName.getText().toString(),editPassword.getText().toString());
-                        table_user.child(editPhone.getText().toString()).setValue(user);
+                        table_user.child(editUsername.getText().toString()).setValue(user);
                         Toast.makeText(SignUp.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
                         finish();
                     }

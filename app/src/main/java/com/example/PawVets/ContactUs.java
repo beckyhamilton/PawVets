@@ -23,7 +23,6 @@ import java.util.ArrayList;
 public class ContactUs extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
-    MyAdapter myAdapter;
 
     private static final int REQUEST_CALL = 1;
 
@@ -34,9 +33,6 @@ public class ContactUs extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        myAdapter = new MyAdapter(this, getMyList());
-        mRecyclerView.setAdapter(myAdapter);
 
     }
 

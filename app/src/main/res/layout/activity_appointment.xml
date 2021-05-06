@@ -1,96 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/petName"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:padding="20dp"
-    tools:context=".SignUp">
+    tools:context=".Appointment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <com.shuhart.stepview.StepView
+        android:id="@+id/step_view"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:orientation="vertical">
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sv_animationType="All"
+        app:sv_stepPadding="12dp" />
 
-        <com.jaredrummler.materialspinner.MaterialSpinner
-            android:id="@+id/select_vet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Select a Vet"
-            android:textSize="30dp"
-            android:gravity="center"
-            android:singleLine="true"
-            android:maxLines="1"
-            android:textAlignment="center"
-            android:textColor="@color/black" />
-
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Pet Name"
-            android:id="@+id/pet_name"
-            android:layout_marginTop="50dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            android:background="@drawable/edittextbackground"
-            android:textAlignment="center" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Select Date"
-            android:id="@+id/select_date"
-            android:layout_marginTop="50dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            android:background="@drawable/edittextbackground"
-            android:textAlignment="center" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Select Time"
-            android:id="@+id/select_time"
-            android:layout_marginTop="50dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            android:background="@drawable/edittextbackground"
-            android:textAlignment="center" />
-
-    </LinearLayout>
-
-    <info.hoang8f.widget.FButton
-        android:id="@+id/BookAppt"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_weight="1"
-        android:shadowColor="#121111"
-        android:text="Book Appointment"
-        android:textColor="#FAF6F6"
-        android:visibility="visible"
-        app:buttonColor="@color/SignInBtn" />
+        android:layout_margin="16dp"
+        android:layout_marginTop="372dp"
+        android:text="Next"
+        app:layout_constraintLeft_toRightOf="@+id/back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/step_view" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Back"
+        app:layout_constraintRight_toLeftOf="@+id/next"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/step_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
 
 
-</RelativeLayout>
+
 

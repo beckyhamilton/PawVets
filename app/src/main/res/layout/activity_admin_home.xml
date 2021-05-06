@@ -6,12 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AdminHome">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Admin Home"
-        android:textSize="50dp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="235dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

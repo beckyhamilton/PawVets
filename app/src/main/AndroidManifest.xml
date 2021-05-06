@@ -22,13 +22,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AdminHome"></activity>
         <activity android:name=".AdminLogin" />
-        <activity android:name=".AnotherActivity" />
         <activity android:name=".ShoppingActivity" />
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings" />
         <activity android:name=".BookingSuccess" />
-        <activity android:name=".LiveChat" />
         <activity android:name=".MyAccount" />
         <activity android:name=".Appointment" />
         <activity android:name=".ContactUs" />

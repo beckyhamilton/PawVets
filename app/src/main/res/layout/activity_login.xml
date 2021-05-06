@@ -18,23 +18,23 @@
         android:layout_height="wrap_content">
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/editPhone"
-            android:hint="Phone Number"
+            android:id="@+id/editUN"
+            android:hint="Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/black"
-            android:text="07593606470"
+            android:text="beckyhamilton"
             android:textSize="34sp"
-            android:inputType="phone"
+            android:inputType="text"
             app:met_floatingLabel="highlight"
-            app:met_maxCharacters="11"
+            app:met_maxCharacters="15"
             app:met_primaryColor="@color/black"
             app:met_singleLineEllipsis="true">
 
         </com.rengwuxian.materialedittext.MaterialEditText>
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/editPassword"
+            android:id="@+id/editPW"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"

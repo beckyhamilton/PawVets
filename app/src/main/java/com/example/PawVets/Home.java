@@ -21,12 +21,12 @@ public class Home extends AppCompatActivity {
 
     //Array of images
     int[] covers = new int[]{
-            R.drawable.settings,
-            R.drawable.contactus,
-            R.drawable.calendar,
-            R.drawable.myaccount,
+            R.drawable.settingsicon,
+            R.drawable.contactusicon,
+            R.drawable.apppointmenticon,
+            R.drawable.myaccounticon,
             R.drawable.symptomchecker,
-            R.drawable.map
+            R.drawable.findusicon
     };
 
     @Override

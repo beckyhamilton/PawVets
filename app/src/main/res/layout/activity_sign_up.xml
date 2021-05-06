@@ -18,16 +18,16 @@
         android:layout_height="wrap_content">
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/editPhone"
-            android:hint="Phone Number"
+            android:id="@+id/editUsername"
+            android:hint="Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/black"
-            android:text="0771574926"
+            android:text="beckyhamilton"
             android:textSize="34sp"
-            android:inputType="phone"
+            android:inputType="text"
             app:met_floatingLabel="highlight"
-            app:met_maxCharacters="11"
+            app:met_maxCharacters="15"
             app:met_primaryColor="@color/black"
             app:met_singleLineEllipsis="true">
 
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/black"
-            android:text="Anne Brown"
+            android:text="Becky Hamilton"
             android:textSize="34sp"
             android:inputType="text"
             app:met_floatingLabel="highlight"
@@ -54,11 +54,11 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:text="4321"
+            android:text="1234"
             android:textColorHint="@color/black"
             android:textSize="34sp"
             app:met_floatingLabel="highlight"
-            app:met_maxCharacters="11"
+            app:met_maxCharacters="15"
             app:met_primaryColor="@color/black"
             app:met_singleLineEllipsis="true">
 

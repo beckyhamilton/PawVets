@@ -2,8 +2,12 @@ package com.example.PawVets;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
+
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,8 +24,11 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 public class Login extends AppCompatActivity {
 
     //Creating variables
-    EditText editPhone, editPassword;
+    EditText editUN, editPW;
     Button SignIn, staffLogin;
+    SharedPreferences sharedPreferences;
+    static final String mypreference = "mypref";
+    static final String Username = "usernameKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +36,25 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //Setting variables
-        editPassword = (MaterialEditText) findViewById(R.id.editPassword);
-        editPhone = (MaterialEditText) findViewById(R.id.editPhone);
+        editPW = (MaterialEditText) findViewById(R.id.editPW);
+        editUN = (MaterialEditText) findViewById(R.id.editUN);
         SignIn = (Button) findViewById(R.id.SignIn);
         staffLogin = (Button) findViewById(R.id.staff_login);
+
+
 
         //Init Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_user = database.getReference("User");
 
+
+
         //Creating on click listener for Sign In button
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                
 
                 final ProgressDialog mDialog = new ProgressDialog(Login.this);
                 mDialog.setMessage("Please wait...");
@@ -52,12 +65,12 @@ public class Login extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                         //Check if user exists in database
-                        if (snapshot.child(editPhone.getText().toString()).exists()) {
+                        if (snapshot.child(editUN.getText().toString()).exists()) {
 
                             //Get user information
                             mDialog.dismiss();
-                            User user = snapshot.child(editPhone.getText().toString()).getValue(User.class);
-                            if (user.getPassword().equals(editPassword.getText().toString())) {
+                            User user = snapshot.child(editUN.getText().toString()).getValue(User.class);
+                            if (user.getPassword().equals(editPW.getText().toString())) {
                                 Intent loginsucess = new Intent(Login.this, Home.class);
                                 startActivity(loginsucess);
                                 Toast.makeText(Login.this, "Sign in Successful", Toast.LENGTH_SHORT).show();
@@ -89,5 +102,9 @@ public class Login extends AppCompatActivity {
 
 
             }
+
+    public void save(View v) {
+
+    }
         }
 

@@ -49,7 +49,5 @@ public void setPetName(String petname) {
         selectTime = selecttime;
     }
 
-
-
 }
 
