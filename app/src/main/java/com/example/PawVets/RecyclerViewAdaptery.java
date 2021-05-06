@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
@@ -93,17 +93,17 @@ public class RecyclerViewAdaptery extends RecyclerView.Adapter<RecyclerViewAdapt
                 mContext.startActivity(myaccount);
             }
 
-        //Open ShoppingActivity if my symptom checker icon clicked
+        //Open ReviewActivity if my symptom checker icon clicked
             if(getLayoutPosition() == 4)
             {
-                Intent symptom = new Intent(mContext,ShoppingActivity.class);
+                Intent symptom = new Intent(mContext, ReviewActivity.class);
                 mContext.startActivity(symptom);
             }
 
         //Open FindUs if my where to find us icon clicked
             if(getLayoutPosition() == 5)
             {
-                Intent newpet = new Intent(mContext, ShoppingActivity.class);
+                Intent newpet = new Intent(mContext, ReviewActivity.class);
                 mContext.startActivity(newpet);
             }
             }
