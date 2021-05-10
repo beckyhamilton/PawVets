@@ -1,29 +1,34 @@
 package com.example.PawVets.Model;
 
-import android.widget.RatingBar;
-
 public class Review {
-    private RatingBar ratingBar1;
-    private String description1;
+    private int Stars;
+    private String Description;
 
     public Review() {
 
     }
 
-    public Review(RatingBar ratingBar, String description) {
-        ratingBar1 = ratingBar;
-        description1 = description;
+    public Review( int stars, String description)   {
+        Stars = stars;
+        Description = description;
     }
 
-    public RatingBar getRatingBar1() {
-        return ratingBar1;
+    public int getStars() {
+        return Stars;
     }
 
-    public String getDescription1() {
-        return description1;
+    public void setStars(int stars) {
+        Stars = stars;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
     }
 }
-
 
 
 
