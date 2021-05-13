@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStaffAccount">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/staffid"
+        android:layout_width="382dp"
+        android:layout_height="82dp"
+        android:hint="Staff ID"
+        android:inputType="text"
+        android:text=""
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="4"
+        app:met_minCharacters="4"
+        app:met_primaryColor="@color/black"
+        app:met_singleLineEllipsis="true">
+
+    </com.rengwuxian.materialedittext.MaterialEditText>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/staffname"
+        android:layout_width="382dp"
+        android:layout_height="82dp"
+        android:hint="Staff Name"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="15"
+        app:met_primaryColor="@color/black"
+        app:met_singleLineEllipsis="true">
+
+
+    </com.rengwuxian.materialedittext.MaterialEditText>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/staffpassword"
+        android:layout_width="382dp"
+        android:layout_height="82dp"
+        android:hint="Staff Password"
+        android:inputType="textPassword"
+        android:text=""
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="15"
+        app:met_primaryColor="@color/black"
+        app:met_singleLineEllipsis="true">
+
+    </com.rengwuxian.materialedittext.MaterialEditText>
+
+    <Button
+        android:id="@+id/addstaff_btn"
+        android:layout_width="232dp"
+        android:layout_height="69dp"
+        android:text="Add Staff Account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

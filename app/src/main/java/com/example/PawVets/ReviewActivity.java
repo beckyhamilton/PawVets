@@ -50,6 +50,30 @@ public class ReviewActivity extends AppCompatActivity {
 
         t1.setText(username);
 
+        table_reviews.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                double total = 0;
+                double count = 0;
+                double average = 0;
+
+                for(DataSnapshot ds: snapshot.getChildren()) {
+                    double rating = Double.parseDouble(ds.child("stars").getValue().toString());
+                    total = total + rating;
+                    count = count + 1;
+                    average = total / count;
+                }
+
+                final DatabaseReference newRef = table_reviews.child("AverageRating");
+                newRef.child("current").setValue(average);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                throw error.toException();
+            }
+        });
+
         submit.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -62,6 +86,10 @@ public class ReviewActivity extends AppCompatActivity {
                 finish();
             }
                     });
+
+
     }
-}
+
+    }
+
 

@@ -20,7 +20,9 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VetList"></activity>
+        <activity android:name=".AddStaffAccount"></activity>
+        <activity android:name=".AddVet" />
+        <activity android:name=".AdminReviews" />
         <activity android:name=".AdminHome" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".ReviewActivity" />
